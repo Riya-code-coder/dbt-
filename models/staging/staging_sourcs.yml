@@ -8,7 +8,7 @@ sources:
       - name: weather_hourly_raw
 
 - name: staging_flights
-  schema: public
+  schema: hh_analytics_24_4
   tables:
     - name: flights
     - name: airports
