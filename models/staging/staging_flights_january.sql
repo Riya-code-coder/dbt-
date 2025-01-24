@@ -1,7 +1,8 @@
-WITH airports_regions_join AS (
+{{ config(materialized='view') }}
+
+WITH flights_january AS (
     SELECT * 
-    FROM {{source('staging_flights', 'airports')}}
-    LEFT JOIN {{source('staging_flights', 'regions')}}
-    USING (country)
+    FROM {{source('flights_data', 'flights')}}
+    WHERE DATE_PART('month', flight_date) = 1 
 )
-SELECT * FROM airports_regions_join
+SELECT * FROM flights_january
