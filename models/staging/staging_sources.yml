@@ -4,11 +4,12 @@ sources:
 - name: staging_weather
   schema: s_riyalamichhane
   tables:
-      - name: weather_daily_raw
-      - name: weather_hourly_raw
+    - name: weather_daily_raw
+    - name: weather_hourly_raw
 
 - name: staging_flights
   schema: public
+  tables:
     - name: flights
     - name: airports
-    - name: regionsgit git 
+    - name: regions
